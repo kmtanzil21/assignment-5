@@ -14,12 +14,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+
 </head>
 
 <body class="bg-green-100">
 
     <!-- navbar section -->
-    <div class="w-full h-[100px] mx-auto pl-10 flex justify-between bg-white">
+    <div class="w-full h-[100px] m-3 pl-10 flex justify-between bg-white ">
         <div class="flex  items-center h-[50px]">
             <img src="assets/logo.png" alt="" class="h-full ">
             <h3 class="ml-2 font-bold text xl text-green-800">Emergency <br>
@@ -29,7 +30,7 @@
         <div class="w-[397px] h-[57px] flex gap-2 items-center text-center justify-end pr-3">
             <div class="bg-[#b9efc5] rounded-lg w-20 h-10 flex items-center justify-center">
                 <i class="fa-solid fa-heart pr-2 text-pink-400"></i>
-                <p>0</p>
+                <p id="initialLives">0</p>
             </div>
             <div class="bg-[#b9efc5] rounded-lg w-20 h-10 flex items-center justify-center">
                 <i class="fa-brands fa-bitcoin pr-2 text-yellow-400"></i>
@@ -52,7 +53,7 @@
             Government of the People’s Republic of Bangladesh</h1>
 
     </div>
-    <!-- card section -->
+    <!-- card section with history-->
 <div class="flex flex-col lg:flex-row gap-6 px-4 py-6">
 
   <!-- Cards Section -->
@@ -62,7 +63,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">National Emergency Number</h1>
@@ -82,7 +83,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/police.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Police Helpline Number</h1>
@@ -102,7 +103,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/fire-service.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Fire Service Number</h1>
@@ -122,7 +123,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/ambulance.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Ambulance Service</h1>
@@ -142,7 +143,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Women & Child Helpline</h1>
@@ -162,7 +163,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Anti-Corruption Helpline</h1>
@@ -182,7 +183,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Electricity Helpline</h1>
@@ -202,7 +203,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/brac.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Brac Helpline</h1>
@@ -222,7 +223,7 @@
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
       <div class="flex justify-between items-center h-[50px]">
         <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart lives"></i>
       </div>
       <div class="pt-3">
         <h1 class="font-bold text-base">Bangladesh Railway Helpline</h1>
@@ -263,6 +264,8 @@
 
 
 
+
+<script src="index.js"></script>
 
 
 </body>
