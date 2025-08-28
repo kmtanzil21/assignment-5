@@ -74,3 +74,39 @@
     if (historyList) historyList.innerHTML = '';
   });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const copyCountEl = document.getElementById('copyCount');
+  const getCount = () => parseInt(copyCountEl?.textContent || '0', 10) || 0;
+  const setCount = n => { if (copyCountEl) copyCountEl.textContent = String(n); };
+
+  async function copyText(text) {
+    if (!text) return;
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    } catch {}
+  }
+
+  document.querySelectorAll('.copy').forEach(btn => {
+    btn.addEventListener('click', async e => {
+      e.preventDefault();
+      const card = btn.closest('.bg-white.rounded-xl.border.border-gray-200.shadow-sm');
+      const number = card?.querySelector('h2')?.textContent?.trim() || '';
+      await copyText(number);
+      setCount(getCount() + 1);
+    });
+  });
+});
